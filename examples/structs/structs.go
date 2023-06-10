@@ -12,7 +12,7 @@ type person struct {
 	age  int
 }
 
-// Функция NewPerson создает новую струкутуру person с
+// Функция NewPerson создает новую структуру person с
 // заданным именем.
 func NewPerson(name string) *person {
 	// Вы можете безопасно вернуть указатель на локальную

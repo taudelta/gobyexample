@@ -24,14 +24,6 @@ import (
 // и получать соответствующие ответы. Эти `структуры`
 // `readOp` и `writeOp` инкапсулируют эти запросы и
 // способ, которым владеет горутина-ответчик.
-// In this example our state will be owned by a single
-// goroutine. This will guarantee that the data is never
-// corrupted with concurrent access. In order to read or
-// write that state, other goroutines will send messages
-// to the owning goroutine and receive corresponding
-// replies. These `readOp` and `writeOp` `struct`s
-// encapsulate those requests and a way for the owning
-// goroutine to respond.
 type readOp struct {
 	key  int
 	resp chan int
@@ -63,7 +55,7 @@ func main() {
 	// выполняется, сначала выполняя запрошенную операцию,
 	// а затем отправляя значение по каналу `resp`,
 	// соответственно, чтобы указать успешность (и
-	// ребуемое значение в случае `reads`).
+	// требуемое значение в случае `reads`).
 	go func() {
 		var state = make(map[int]int)
 		for {

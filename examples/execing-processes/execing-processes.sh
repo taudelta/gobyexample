@@ -1,4 +1,4 @@
-# When we run our program it is replaced by `ls`.
+# Когда мы запускаем нашу программу она будет заменена командой `ls`.
 $ go run execing-processes.go
 total 16
 drwxr-xr-x  4 mark 136B Oct 3 16:29 .

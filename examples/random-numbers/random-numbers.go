@@ -17,7 +17,7 @@ func main() {
 	fmt.Print(rand.Intn(100))
 	fmt.Println()
 
-	// `rand.Float64` вернет `число с плавающей точкой` в присвоит
+	// `rand.Float64` вернет `число с плавающей точкой` и присвоит
 	// его в `f`, где `f` будет в промежутке `0.0 <= f < 1.0`.
 	fmt.Println(rand.Float64())
 

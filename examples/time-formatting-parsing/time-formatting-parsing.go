@@ -1,5 +1,5 @@
-// Go supports time formatting and parsing via
-// pattern-based layouts.
+// Go поддерживает форматирование и парсинг времени
+// с помощью шаблонов
 
 package main
 
@@ -42,7 +42,7 @@ func main() {
 		t.Year(), t.Month(), t.Day(),
 		t.Hour(), t.Minute(), t.Second())
 
-	// `Parse` вернет ошибку. если не сможет распарсить данные.
+	// `Parse` вернет ошибку если не сможет распарсить данные.
 	ansic := "Mon Jan _2 15:04:05 2006"
 	_, e = time.Parse(ansic, "8:41PM")
 	p(e)

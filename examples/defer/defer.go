@@ -38,7 +38,6 @@ func createFile(p string) *os.File {
 func writeFile(f *os.File) {
 	fmt.Println("writing")
 	fmt.Fprintln(f, "data")
-
 }
 
 func closeFile(f *os.File) {
